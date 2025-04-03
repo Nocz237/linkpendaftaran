@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eprom Robotic Competition</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #121212;
+            color: white;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 18px;
+        }
+        section {
+            display: none;
+            margin-top: 20px;
+        }
+        #home {
+            display: block;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #444;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(255,255,255,0.1);
+            background-color: #222;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #333;
+            color: white;
+            border: 1px solid #555;
+            border-radius: 5px;
+            display: block;
+            text-align: left;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('register')">Daftar</a>
+        <a href="#" onclick="showSection('rules')">Peraturan</a>
+        <a href="#" onclick="showSection('contact')">Kontak</a>
+    </nav>
+    
+    <section id="home">
+        <h2>Selamat Datang di Eprom Robotic Competition</h2>
+        <p>Kompetisi robotik tingkat universitas dan sekolah menengah.</p>
+    </section>
+    
+    <section id="register">
+        <h2>Formulir Pendaftaran ERCO</h2>
+        <form action="https://formspree.io/f/mldjpnol" method="POST">
+            <label for="team-name">Nama Tim:</label>
+            <input type="text" id="team-name" name="team-name" required>
+            
+            <label for="participant1">Nama Peserta 1:</label>
+            <input type="text" id="participant1" name="participant1" required>
+            
+            <label for="participant2">Nama Peserta 2:</label>
+            <input type="text" id="participant2" name="participant2">
+            
+            <label for="institution">Asal Instansi:</label>
+            <input type="text" id="institution" name="institution" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone 1">Nomor Telepon Peserta 1:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="phone 2">Nomor Telepon Peserta 2:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="category">Kategori Lomba:</label>
+            <select id="category" name="category" required>
+                <option value="robot-transporter">Robot Transporter</option>
+                <option value="robot-soccer">Robot Soccer</option>
+            </select>
+            
+    
+            
+            <button type="submit">Daftar</button>
+        </form>
+    </section>
+    
+    <section id="rules">
+        <h2>Peraturan Lomba</h2>
+        <p>Berikut adalah peraturan yang harus diikuti dalam kompetisi ini.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Kontak</h2>
+        <p>Email: contact@epromcompetition.com</p>
+        <p>Telepon: 0812-3456-7890</p>
+    </section>
+    
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
